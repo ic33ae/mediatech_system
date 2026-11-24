@@ -16,6 +16,9 @@ Route::domain($internalHost)->group(function () {
         return redirect('/login');
     });
 
+    Route::view('/sales-orders', 'sales.sales-orders.index')
+        ->name('sales-orders.index');
+
     require __DIR__ . "/app.php";
     require __DIR__ . "/auth.php";
 });
